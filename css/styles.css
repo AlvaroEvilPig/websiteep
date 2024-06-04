@@ -4,19 +4,11 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #f0f2f5;
   color: #333;
-  margin: 0;
-  padding: 0;
 }
 
-/* Navbar */
 .navbar {
   background-color: white;
   padding: 0.75rem 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
 }
 
 .navbar-brand .logo {
@@ -26,21 +18,19 @@ body {
 .navbar-nav .nav-link {
   color: #0d163e !important;
   font-weight: 500;
-  transition: color 0.3s;
 }
 
 .navbar-nav .nav-link:hover {
   color: #0a1142 !important;
 }
 
-/* Jumbotron */
+/* General Jumbotron Styles */
 .jumbotron {
   background-size: cover;
   color: white;
   position: relative;
   padding: 8rem 2rem;
   margin-bottom: 0;
-  text-align: center;
 }
 
 .jumbotron::before {
@@ -75,21 +65,53 @@ body {
   font-size: 1.25rem;
   font-weight: 500;
   border-radius: 50px;
-  transition: background-color 0.3s;
 }
 
 .jumbotron .btn-primary:hover {
   background-color: #0a1142;
 }
 
-/* Section Titles */
+/* Jumbotron Specific Backgrounds */
+#main-jumbotron {
+  background: url('images/homecover.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+#about-jumbotron {
+  background: url('images/aboutus.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+#companies-jumbotron {
+  background: url('images/jumbotron-bg.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+#team-jumbotron {
+  background: url('images/teamscover.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+#contact-jumbotron {
+  background: url('images/contactcover.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
 .section-title {
+  font-family: 'Roboto', sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 3rem;
-  text-align: center;
-  color: #0d163e;
   position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  color: #0d163e;
 }
 
 .section-title::after {
@@ -102,7 +124,6 @@ body {
   border-radius: 50px;
 }
 
-/* Feature Boxes */
 .feature-box, .icon-box {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 2rem;
@@ -114,10 +135,21 @@ body {
 
 .feature-box:hover, .icon-box:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
 }
 
-/* Footer */
+.icon-box {
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 footer {
   background-color: #343a40;
   color: white;
@@ -129,7 +161,6 @@ footer p {
   margin: 0;
 }
 
-/* Forms */
 .form-group label {
   font-weight: 500;
 }
@@ -145,14 +176,18 @@ footer p {
   font-size: 1.25rem;
   font-weight: 500;
   border-radius: 50px;
-  transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
   background-color: #0a1142;
 }
 
-/* FAQ */
+.card-header .btn-link {
+  color: #0d163e;
+  font-weight: 500;
+  text-decoration: none;
+}
+
 .faq .card-header {
   background-color: #f8f9fa;
   border: 1px solid #ddd;
@@ -160,8 +195,8 @@ footer p {
 
 .faq .card-header .btn-link {
   color: #0d163e;
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .faq .card-header .btn-link:hover {
@@ -176,14 +211,4 @@ footer p {
   background-color: #fff;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-  .navbar-nav .nav-link {
-    display: block;
-    padding: 10px;
-  }
 
-  .section-title {
-    font-size: 2rem;
-  }
-}
