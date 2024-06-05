@@ -7,23 +7,26 @@
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="navbar navbar-expand-lg sticky-top">
-    <a class="navbar-brand" href="index.html">
-      <img src="images/evilpig-logo.png" alt="EvilPig Logo" class="logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="companies.html">Companies</a></li>
-        <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+  <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/evilpig-logo.png" alt="EvilPig Logo" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="companies.html">Companies</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -36,7 +39,7 @@
     </div>
 
     <!-- Introduction Section -->
-    <section class="introduction mt-5">
+    <section class="introduction mt-5 py-5">
       <div class="container">
         <h2 class="text-center section-title">Introduction</h2>
         <p class="text-center">EvilPig invests in a diverse range of companies, each with a unique vision and mission. We are proud to support their growth and innovation in various industries.</p>
@@ -68,7 +71,7 @@
     </section>
 
     <!-- Success Stories Section -->
-    <section class="success-stories mt-5">
+    <section class="success-stories mt-5 py-5">
       <div class="container">
         <h2 class="text-center section-title">Success Stories</h2>
         <div class="row">
@@ -100,8 +103,8 @@
       </div>
     </section>
 
-     <!-- Sección FAQ -->
-     <section class="faq mt-5">
+    <!-- FAQ Section -->
+    <section class="faq mt-5 py-5">
       <div class="container">
         <h2 class="text-center section-title">FAQ</h2>
         <div class="accordion" id="faqAccordion">
@@ -153,34 +156,43 @@
   </main>
 
   <footer class="mt-5 bg-dark text-white text-center py-3">
-    <p>&copy; 2024 EvilPig. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2024 EvilPig. Todos los derechos reservados.</p>
+    </div>
   </footer>
 
-  <!-- Incluye jQuery y Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
 
-  <!-- Código JavaScript -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Smooth scrolling for internal links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
+<!-- Incluye jQuery y Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Código JavaScript -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
         });
       });
-
-      // Maneja la activación y desactivación de los paneles del acordeón
-      $('#faqAccordion').on('show.bs.collapse', function (e) {
-        $(e.target).prev('.card-header').addClass('active');
-      }).on('hide.bs.collapse', function (e) {
-        $(e.target).prev('.card-header').removeClass('active');
-      });
     });
-  </script>
+
+    // Maneja la activación y desactivación de los paneles del acordeón
+    $('#faqAccordion').on('show.bs.collapse', function (e) {
+      $(e.target).prev('.card-header').addClass('active');
+    }).on('hide.bs.collapse', function (e) {
+      $(e.target).prev('.card-header').removeClass('active');
+    });
+  });
+</script>
 </body>
 </html>

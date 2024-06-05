@@ -7,23 +7,26 @@
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="navbar navbar-expand-lg sticky-top">
-    <a class="navbar-brand" href="index.html">
-      <img src="images/evilpig-logo.png" alt="EvilPig Logo" class="logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="companies.html">Companies</a></li>
-        <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+  <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/evilpig-logo.png" alt="EvilPig Logo" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="companies.html">Companies</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -36,7 +39,7 @@
     </div>    
 
     <!-- Introduction Section -->
-    <section class="introduction mt-5">
+    <section class="introduction mt-5 py-5">
       <div class="container">
         <h2 class="text-center section-title">Introduction</h2>
         <p class="text-center">At EvilPig, our team is our greatest asset. We are a diverse group of professionals committed to excellence and innovation.</p>
@@ -71,7 +74,7 @@
     </section>
 
     <!-- Innovation Team Section -->
-    <section class="innovation-team mt-5">
+    <section class="innovation-team mt-5 py-5">
       <div class="container">
         <h2 class="text-center section-title">Innovation Team</h2>
         <div class="row">
@@ -106,7 +109,7 @@
     </section>
 
     <!-- Join Our Team Section -->
-    <section class="join-our-team mt-5">
+    <section class="join-our-team mt-5 py-5">
       <div class="container">
         <h2 class="text-center section-title">Join Our Team</h2>
         <p class="text-center">Are you passionate about innovation and excellence? We are always looking for talented individuals to join our team. Check out our current job openings and apply today!</p>
@@ -118,7 +121,9 @@
   </main>
 
   <footer class="mt-5 bg-dark text-white text-center py-3">
-    <p>&copy; 2024 EvilPig. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2024 EvilPig. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>

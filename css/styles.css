@@ -1,214 +1,198 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+/* Importar las fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f0f2f5;
-  color: #333;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f5f5f5; /* Fondo gris claro para todo el cuerpo */
 }
 
 .navbar {
-  background-color: white;
-  padding: 0.75rem 1rem;
+    background-color: #333; /* Color de fondo del navbar */
 }
 
-.navbar-brand .logo {
-  height: 50px;
+.navbar-brand img.logo {
+    height: 40px;
 }
 
 .navbar-nav .nav-link {
-  color: #0d163e !important;
-  font-weight: 500;
+    color: #fff !important; /* Color de los enlaces del navbar */
+    margin-right: 15px;
+    transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #0a1142 !important;
+    color: #1a73e8 !important; /* Color de los enlaces del navbar al pasar el mouse */
 }
 
-/* General Jumbotron Styles */
 .jumbotron {
-  background-size: cover;
-  color: white;
-  position: relative;
-  padding: 8rem 2rem;
-  margin-bottom: 0;
+    position: relative;
+    background: url('images/inicio.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
 }
 
 .jumbotron::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Sombra para mejorar la visibilidad del texto */
+    z-index: 1;
 }
 
-.jumbotron .container {
-  position: relative;
-  z-index: 1;
+.jumbotron h1,
+.jumbotron p,
+.jumbotron .btn-primary {
+    position: relative;
+    z-index: 2;
 }
 
-.jumbotron .display-4 {
-  font-weight: 700;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+.jumbotron h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
-.jumbotron .lead {
-  font-size: 1.25rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+.jumbotron p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
 }
 
 .jumbotron .btn-primary {
-  background-color: #0d163e;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
-  font-weight: 500;
-  border-radius: 50px;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #333; /* Color del texto del botón */
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px; /* Bordes redondeados */
 }
 
 .jumbotron .btn-primary:hover {
-  background-color: #0a1142;
-}
-
-/* Jumbotron Specific Backgrounds */
-#main-jumbotron {
-  background: url('images/homecover.jpg') no-repeat center center;
-  background-size: cover;
-  position: relative;
-}
-
-#about-jumbotron {
-  background: url('images/aboutus.jpg') no-repeat center center;
-  background-size: cover;
-  position: relative;
-}
-
-#companies-jumbotron {
-  background: url('images/jumbotron-bg.jpg') no-repeat center center;
-  background-size: cover;
-  position: relative;
-}
-
-#team-jumbotron {
-  background: url('images/teamscover.jpg') no-repeat center center;
-  background-size: cover;
-  position: relative;
-}
-
-#contact-jumbotron {
-  background: url('images/contactcover.jpg') no-repeat center center;
-  background-size: cover;
-  position: relative;
+    background-color: #f0f0f0; /* Cambio de fondo del botón al pasar el mouse */
+    transform: scale(1.05); /* Pequeño zoom al pasar el mouse */
 }
 
 .section-title {
-  font-family: 'Roboto', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 500;
-  margin-bottom: 3rem;
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  width: 100%;
-  color: #0d163e;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-weight: 700; /* Negrita */
+    color: #333; /* Color del título de la sección */
 }
 
-.section-title::after {
-  content: '';
-  display: block;
-  width: 100px;
-  height: 3px;
-  background: #0d163e;
-  margin: 10px auto 0;
-  border-radius: 50px;
+/* Estilos para las tarjetas interactivas */
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; /* Fondo blanco para las tarjetas */
 }
 
-.feature-box, .icon-box {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 2rem;
-  border-radius: 15px;
-  background: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.feature-box:hover, .icon-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+.card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-body .icon-box i,
+.card-body h3,
+.card-body p {
+    transition: color 0.3s ease;
+}
+
+.card-body i {
+    font-size: 3rem;
+    color: #1a73e8 !important; /* Color para los íconos */
+}
+
+.card-body h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700; /* Negrita */
+    color: #333 !important; /* Color del título de la tarjeta */
+}
+
+.card-body p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 400; /* Negrita */
+    color: #333 !important; /* Color del texto de la tarjeta */
+}
+
+/* Estilos para secciones */
+.impulse, .features, .revenue {
+    padding: 4rem 0;
+    background-color: #f5f5f5; /* Fondo gris claro para las secciones */
 }
 
 .icon-box {
-  margin-bottom: 1rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
 }
 
-.feature-title {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.icon-box i {
+    font-size: 3rem;
 }
 
-footer {
-  background-color: #343a40;
-  color: white;
-  padding: 2rem 0;
-  text-align: center;
+.card:hover .icon-box i {
+    transform: scale(1.1);
 }
 
-footer p {
-  margin: 0;
+.footer {
+    margin-top: 5rem;
+    background-color: #333; /* Color de fondo del footer */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
 }
 
-.form-group label {
-  font-weight: 500;
+.footer p {
+    margin: 0;
+    color: white; /* Color del texto del footer */
 }
 
-.form-control {
-  border-radius: 10px;
+/* Botón de volver arriba */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
 }
 
-.btn-primary {
-  background-color: #0d163e;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
-  font-weight: 500;
-  border-radius: 50px;
+.back-to-top:hover {
+    background-color: #1a73e8;
 }
 
-.btn-primary:hover {
-  background-color: #0a1142;
+.back-to-top i {
+    font-size: 1.2rem;
 }
-
-.card-header .btn-link {
-  color: #0d163e;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.faq .card-header {
-  background-color: #f8f9fa;
-  border: 1px solid #ddd;
-}
-
-.faq .card-header .btn-link {
-  color: #0d163e;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.faq .card-header .btn-link:hover {
-  color: #0a1142;
-}
-
-.faq .card-header.active {
-  background-color: #e2e3e5;
-}
-
-.faq .card-body {
-  background-color: #fff;
-}
-
-
